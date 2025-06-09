@@ -1,7 +1,3 @@
-Got it! Here's a clean, professional README for your Library Management System **without** request body details, but with clear API endpoints and descriptions:
-
----
-
 # Library Management System
 
 A Java-based Library Management System to manage library operations such as issuing and returning books, managing students, books, tables, and admin functionalities.
