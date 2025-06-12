@@ -14,6 +14,8 @@ public enum Genre {
 
     COMEDY,
 
-    HISTORY
+    HISTORY,
+
+    DRAMA
 
 }

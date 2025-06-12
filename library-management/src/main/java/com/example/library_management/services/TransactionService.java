@@ -114,7 +114,7 @@ public class TransactionService {
 
         //Getting the correspondence issuance txn
 
-        Transaction issuanceTxn = transactionRepository.findTopByStudentAndBookAndTransactionTypeOrderByIdDesc(student.getId(), book.getId(),TransactionType.ISSUE);
+        Transaction issuanceTxn = transactionRepository.findTopByStudentAndBookAndTransactionTypeOrderByIdDesc(student, book,TransactionType.ISSUE);
 
         if(issuanceTxn == null){
             throw new Exception("Invalid request");
