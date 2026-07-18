@@ -1,8 +1,8 @@
 package com.example.library_management.dtos;
 
 import com.example.library_management.models.Student;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Getter
@@ -15,7 +15,8 @@ public class CreateStudentRequest {
     @NotBlank
     private String name;
 
-    @NotNull
+    @NotBlank
+    @Email
     private String email;
 
     private Integer age;

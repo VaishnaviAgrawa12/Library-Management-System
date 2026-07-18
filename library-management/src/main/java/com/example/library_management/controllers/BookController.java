@@ -1,7 +1,6 @@
 package com.example.library_management.controllers;
 
 import com.example.library_management.dtos.CreateBookRequest;
-import com.example.library_management.dtos.SearchBookRequest;
 import com.example.library_management.models.Book;
 import com.example.library_management.services.BookService;
 import jakarta.validation.Valid;
@@ -24,17 +23,13 @@ public class BookController {
 
     }
 
+    //localhost:9090/book?key=author_name&value=Peter
+    //localhost:9090/book?key=genre&value=FICTIONAL
     @GetMapping("/book")
-    public List<Book> getBooks(@RequestBody @Valid SearchBookRequest searchBookRequest) throws Exception {
+    public List<Book> getBooks(@RequestParam("key") String searchKey,
+                               @RequestParam("value") String searchValue) throws Exception {
 
-        return bookService.find(
-                searchBookRequest.getSearchKey(),
-                searchBookRequest.getSearchValue()
-        );
-        
+        return bookService.find(searchKey, searchValue);
 
     }
-
-    //localhost:8080/book?key=author_name&value=Peter
-    //localhost:8080/book?key=genre&value=FICTIONAL
 }

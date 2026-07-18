@@ -24,14 +24,14 @@ public class Book {
 
     private String name;
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private Genre genre;
 
     @CreationTimestamp
-    private Date CreatedOn;
+    private Date createdOn;
 
     @UpdateTimestamp
-    private Date UpdatedOn;
+    private Date updatedOn;
 
     @ManyToOne
     @JoinColumn

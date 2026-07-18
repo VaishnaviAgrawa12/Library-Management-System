@@ -2,15 +2,17 @@ package com.example.library_management.services;
 
 import com.example.library_management.dtos.InitiateTransactionRequest;
 import com.example.library_management.models.*;
-import com.example.library_management.repositaries.TransactionRepository;
+import com.example.library_management.repositories.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+@Service
 public class TransactionService {
 
     @Autowired
@@ -108,7 +110,7 @@ public class TransactionService {
                 || admin == null // admin is null
                 || book == null
                 || book.getStudent() == null //if the book is assigned to someone or not
-                || book.getStudent().getId() != student.getId()){ //if the book is assigned to same person or not who is requesting to return
+                || !book.getStudent().getId().equals(student.getId())){ //if the book is assigned to same person or not who is requesting to return
             throw new Exception("Invalid request");
         }
 

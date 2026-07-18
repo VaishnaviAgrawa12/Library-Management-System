@@ -27,14 +27,14 @@ public class Transaction {
     @Enumerated(value = EnumType.STRING)
     private TransactionType transactionType;
 
-
+    @Enumerated(value = EnumType.STRING)
     private TransactionStatus transactionStatus;
 
     @CreationTimestamp
-    private Date CreatedOn;
+    private Date createdOn;
 
     @UpdateTimestamp
-    private Date UpdatedOn;
+    private Date updatedOn;
 
     private Integer fine;
 

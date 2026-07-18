@@ -1,12 +1,10 @@
-package com.example.library_management.repositaries;
+package com.example.library_management.repositories;
 
 import com.example.library_management.models.Book;
 import com.example.library_management.models.Student;
 import com.example.library_management.models.Transaction;
 import com.example.library_management.models.TransactionType;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Integer> {
 

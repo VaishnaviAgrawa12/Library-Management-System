@@ -1,7 +1,7 @@
 package com.example.library_management.services;
 
 import com.example.library_management.models.Author;
-import com.example.library_management.repositaries.AuthorRepository;
+import com.example.library_management.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

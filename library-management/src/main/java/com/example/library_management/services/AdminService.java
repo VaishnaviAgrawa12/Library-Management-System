@@ -2,7 +2,7 @@ package com.example.library_management.services;
 
 
 import com.example.library_management.models.Admin;
-import com.example.library_management.repositaries.AdminRepository;
+import com.example.library_management.repositories.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

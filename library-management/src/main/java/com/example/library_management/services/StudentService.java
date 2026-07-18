@@ -2,7 +2,7 @@ package com.example.library_management.services;
 
 
 import com.example.library_management.models.Student;
-import com.example.library_management.repositaries.StudentRepositary;
+import com.example.library_management.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
     @Autowired
-    StudentRepositary studentRepositary;
+    StudentRepository studentRepository;
 
     public void create(Student student) {
-        studentRepositary.save(student);
+        studentRepository.save(student);
     }
 
     public Student find(int studentId) {
-        return studentRepositary.findById(studentId).orElse(null);
+        return studentRepository.findById(studentId).orElse(null);
 
     }
 }

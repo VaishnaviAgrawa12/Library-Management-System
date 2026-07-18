@@ -1,0 +1,9 @@
+# IDE
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Build output
+target/
